@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "87a6fcb9-2e36-4160-a4ce-1deb2e153818",
+		"name": "DRF Authentication Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26440051"
+	},
+	"item": [
+		{
+			"name": "user registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "tusharthakur0089@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "Name",
+							"value": "tushar",
+							"type": "text"
+						},
+						{
+							"key": "Tc",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "password ",
+							"value": "tushar@123",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "tushar@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "tusharthakur0089@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password ",
+							"value": "tushar@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5NTA2OTE1LCJpYXQiOjE2Nzk1MDY2MTUsImp0aSI6ImE1MzNmZGI5ZWI2NDQxMzk4NzhkYTQ3ZDgwMjNmNjBkIiwidXNlcl9pZCI6MTB9.twb47AR1yO-1FL6QivwGLnW1c-spqOdOZ1shxQw6svA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8000/profile/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5Mzc3MTg0LCJpYXQiOjE2NzkzNzY4ODQsImp0aSI6ImVhMzdjZTUzNzBjMjRiN2JiMDY4YjBhZTVjZWU0NTY5IiwidXNlcl9pZCI6OX0.PNITG4A7zdm7wRihzqx5P9g0MEMokOX5J4W16cfdKCw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "tushar@1234",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "tushar@1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/changepassword/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"changepassword",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send password reset link",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "tusharthakur0089@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/send-password-reset-link/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"send-password-reset-link",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset user password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "tushar@1234546",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "tushar@1234546",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/reset-password/OA/blf35n-3d642582ed976af68a328ed720a81473/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"reset-password",
+						"OA",
+						"blf35n-3d642582ed976af68a328ed720a81473",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
